@@ -76,4 +76,6 @@ h1 {
 #mainCanvas {
   border-style: solid;
   cursor: crosshair;
+  width: 500px;
+  height: 500px;
 }

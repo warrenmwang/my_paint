@@ -1,8 +1,6 @@
 class MyPaint {
   public canvas: HTMLCanvasElement;
   public ctx: CanvasRenderingContext2D;
-  public canvasTop: number;
-  public canvasLeft: number;
   private isDrawing: boolean;
   private prevHovX: number;
   private prevHovY: number;
@@ -21,17 +19,12 @@ class MyPaint {
     this.canvas = canvas;
     this.ctx = ctx;
 
-    const rect = canvas.getBoundingClientRect();
-    this.canvasTop = rect.top;
-    this.canvasLeft = rect.left;
-
     this.isDrawing = false;
     this.prevHovX = -1;
     this.prevHovY = -1;
 
     this.setUpDrawEvents();
     this.setUpColorPickerEvents();
-    this.setUpResizeEvents();
     this.setUpClearButton();
   }
 
@@ -39,14 +32,6 @@ class MyPaint {
     const clearBtn = document.querySelector(".clear") as HTMLButtonElement;
     clearBtn.addEventListener("click", () => {
       this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
-    });
-  }
-
-  setUpResizeEvents() {
-    addEventListener("resize", () => {
-      const rect = this.canvas.getBoundingClientRect();
-      this.canvasTop = rect.top;
-      this.canvasLeft = rect.left;
     });
   }
 
@@ -84,8 +69,8 @@ class MyPaint {
     const mousedown = (ev: MouseEvent) => {
       this.isDrawing = true;
 
-      const x = Math.trunc(ev.clientX - this.canvasLeft);
-      const y = Math.trunc(ev.clientY - this.canvasTop);
+      const x = ev.offsetX;
+      const y = ev.offsetY;
       this.ctx.fillRect(x, y, 1, 1);
       this.prevHovX = x;
       this.prevHovY = y;
@@ -94,8 +79,9 @@ class MyPaint {
     const mousemove = (ev: MouseEvent) => {
       if (!this.isDrawing) return;
 
-      const x = Math.trunc(ev.clientX - this.canvasLeft);
-      const y = Math.trunc(ev.clientY - this.canvasTop);
+      const x = ev.offsetX;
+      const y = ev.offsetY;
+
       drawLine(this.prevHovX, this.prevHovY, x, y);
       this.prevHovX = x;
       this.prevHovY = y;

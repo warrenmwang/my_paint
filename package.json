@@ -4,11 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "gh-pages -d public"
   },
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "gh-pages": "^6.2.0",
     "nodemon": "^3.1.7",
     "typescript": "^5.6.3"
   }
