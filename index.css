@@ -1,0 +1,81 @@
+h1 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.container__hor {
+  display: flex;
+  justify-content: center;
+  gap: 5em;
+}
+
+.container__ver {
+  display: flex;
+  flex-flow: column;
+}
+
+.palette {
+  display: flex;
+  flex-flow: column;
+  background-color: #C0C0C0;
+  padding: 20px;
+  border-radius: 5px;
+  gap: 5px;
+}
+
+.circle {
+  border-radius: 25px;
+  width: 50px;
+  height: 50px;
+}
+
+.color__white {
+  background-color: white;
+}
+
+.selected {
+  box-shadow: 10px 10px 10px blueviolet;
+}
+
+.color__black {
+  background-color: black;
+}
+
+.color__blue {
+  background-color: blue;
+}
+
+.color__green {
+  background-color: green;
+}
+
+.color__red {
+  background-color: red;
+}
+
+.color__yellow {
+  background-color: yellow;
+}
+
+.color__orange {
+  background-color: orange;
+}
+
+.color__purple {
+  background-color: purple;
+}
+
+.color__salmon {
+  background-color: salmon;
+}
+
+.clear {
+  height: fit-content;
+}
+
+#mainCanvas {
+  border-style: solid;
+  cursor: crosshair;
+  width: 500px;
+  height: 500px;
+}

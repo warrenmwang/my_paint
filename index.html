@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+  <head>
+    <meta name="author" content="Warren Wang" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="index.css?1.0.0" />
+    <title>MyPaint</title>
+  </head>
+  <body>
+    <div id="root">
+      <h1>MyPaint</h1>
+      <div class="container__hor">
+        <div class="container__ver">
+          <button class="clear">Clear</button>
+          <div class="palette">
+            <div id="white" class="circle color__white"></div>
+            <div id="black" class="circle color__black"></div>
+            <div id="blue" class="circle color__blue"></div>
+            <div id="green" class="circle color__green"></div>
+            <div id="red" class="circle color__red"></div>
+            <div id="yellow" class="circle color__yellow"></div>
+            <div id="orange" class="circle color__orange"></div>
+            <div id="purple" class="circle color__purple"></div>
+            <div id="salmon" class="circle color__salmon"></div>
+          </div>
+        </div>
+        <canvas id="mainCanvas" width="500px" height="500px"></canvas>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
