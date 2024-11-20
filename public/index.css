@@ -33,8 +33,40 @@ h1 {
   background-color: white;
 }
 
-.selected {
-  box-shadow: 10px 10px 10px blueviolet;
+.selected__white {
+  box-shadow: 0px 0px 10px white;
+}
+
+.selected__black {
+  box-shadow: 0px 0px 10px black;
+}
+
+.selected__blue {
+  box-shadow: 0px 0px 10px blue;
+}
+
+.selected__green {
+  box-shadow: 0px 0px 10px green;
+}
+
+.selected__red {
+  box-shadow: 0px 0px 10px red;
+}
+
+.selected__yellow {
+  box-shadow: 0px 0px 10px yellow;
+}
+
+.selected__orange {
+  box-shadow: 0px 0px 10px orange;
+}
+
+.selected__purple {
+  box-shadow: 0px 0px 10px purple;
+}
+
+.selected__salmon {
+  box-shadow: 0px 0px 10px salmon;
 }
 
 .color__black {
