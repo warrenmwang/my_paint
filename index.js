@@ -25,7 +25,7 @@ class MyPaint {
         });
     }
     setUpColorPickerEvents() {
-        this.prevColorElement.classList.add("selected");
+        this.prevColorElement.classList.add("selected__black");
         const palette = document.querySelector(".palette");
         palette.addEventListener("click", (e) => {
             const target = e.target;
@@ -35,8 +35,8 @@ class MyPaint {
             const color = id;
             this.ctx.fillStyle = color;
             this.ctx.strokeStyle = color;
-            this.prevColorElement.classList.remove("selected");
-            target.classList.add("selected");
+            this.prevColorElement.classList.remove(`selected__${this.prevColorElement.id}`);
+            target.classList.add(`selected__${color}`);
             this.prevColorElement = target;
         });
     }
